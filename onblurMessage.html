@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script type="text/javascript" src="onblurMessage.js"></script>
+<style type="text/css">
+	form ul li {
+	list-style: none;
+	margin-top: 5px;
+}
+	form ul li input{
+		width: 200px;
+		height: 30px;
+	}
+	form ul li span {
+		color: orange;
+	}
+	form button {
+		width: 100px;
+		height: 30px;
+		margin-left: 300px;
+	}
+</style>
+</head>
+<body>
+
+<form>
+	<ul>
+		<li>Message:
+			<input id="message" type="text" name="message" onblur="onValideDate(1,32,this, document.getElementById('messageHelp'))">
+			<span id="messageHelp"></span>
+		</li>
+		<li>Fly date:
+			<input type="" name="date" onblur="validateDate(this, document.getElementById('dateHelp'))">
+			<span id="dateHelp"></span>
+		</li>
+		<li>Enter your name:
+			<input type="" name="name" onblur="nonEmpty(this, document.getElementById('nameHelp'))">
+			<span id="nameHelp"></span>
+		</li>
+		<li>ZIP code:
+			<input type="" name="zipcode" onblur="zipVerify(this, document.getElementById('zipcodeHelp'))">
+			<span id="zipcodeHelp"></span>
+		</li>
+		<li>Phone number:
+			<input type="" name="phone" onblur="validatePhone(this, document.getElementById('phoneHelp'))">
+			<span id="phoneHelp"></span>
+		</li>
+		<li>Enter your email adress:
+			<input type="" name="email" onblur="validateEmail(this, document.getElementById('emailHelp'))">
+			<span id="emailHelp"></span>
+		</li>
+	</ul>
+	<button onclick="placeOrder(this.form)">Order Banner</button>
+	
+</form>
+
+</body>
+</html>
